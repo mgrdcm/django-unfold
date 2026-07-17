@@ -89,6 +89,18 @@
   background-image: repeating-linear-gradient(45deg, var(--color-base-800) 0px, var(--color-base-800) 1px, transparent 2px, transparent 10px);
 }
 
+@utility scrollbar-default {
+  @apply scrollbar-thin scrollbar-thumb-base-900/40 dark:scrollbar-thumb-base-400/40 scrollbar-track-transparent;
+}
+
+@utility scrollbar-default-hover {
+  @apply scrollbar-thin scrollbar-thumb-transparent;
+
+  @variant hover {
+    @apply scrollbar-thumb-base-900/40 dark:scrollbar-thumb-base-400/40 scrollbar-track-transparent
+  }
+}
+
 @utility text-important {
  @apply text-font-important-light dark:text-font-important-dark;
 }
@@ -738,21 +750,10 @@ trix-toolbar[id^="trix-toolbar-"] {
 }
 
 /*******************************************************
- Simplebar
- *******************************************************/
-.simplebar-track .simplebar-scrollbar {
-  @apply before:bg-base-900/80 dark:before:bg-base-400/80;
-}
-
-.simplebar-horizontal-scrollbar-top .simplebar-track.simplebar-horizontal {
-  @apply top-9
-}
-
-/*******************************************************
  DjangoQL
  *******************************************************/
 textarea#searchbar {
-  @apply font-medium placeholder-base-400 leading-[35px] max-h-[35px] min-h-[35px] whitespace-nowrap !w-full focus:outline-none;
+  @apply font-medium placeholder-base-400 leading-[36px] max-h-[36px] min-h-[36px] whitespace-nowrap !w-full focus:outline-none;
 }
 
 div.djangoql-completion {
